@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Sri Mangalam Chit Funds Madurai</title>
+  <meta name="description" content="Explore our events, celebrations, and community engagement.">
+  <link rel="icon" type="image/png" href="https://srimangalamchitfundsmadurai.com/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Radical Gallery Specifics */
+    .gallery-masonry {
+      columns: 1;
+      column-gap: var(--space-sm);
+    }
+    @media (min-width: 600px) { .gallery-masonry { columns: 2; } }
+    @media (min-width: 900px) { .gallery-masonry { columns: 3; } }
+    @media (min-width: 1200px) { .gallery-masonry { columns: 4; } }
+    
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: var(--space-sm);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: grayscale(0.8) contrast(1.2);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0) contrast(1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-sm);
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-icon {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      display: flex; align-items: center; justify-content: center;
+      color: #000;
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .gallery-item:hover .gallery-icon {
+      transform: translateY(0);
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 1px solid var(--border-light);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pill Navbar -->
+  <div class="pill-nav-wrapper">
+    <nav class="pill-nav" id="pillNav">
+      <a href="index.html" class="nav-logo">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">Story</a>
+        <a href="schemes.html">Plans</a>
+        <a href="careers.html">Careers</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="contact-us.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main style="position: relative; z-index: 10; background: var(--bg-main);">
+
+    <!-- Page Banner -->
+    <header class="sub-hero">
+      <div class="container">
+        <h1>Visual <span>Archive</span></h1>
+        <p class="subtitle" style="margin: 0 auto;">Moments of triumph, community, and growth captured through our journey.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        
+        <div class="gallery-masonry" id="galleryGrid">
+          <!-- Images injected via JS to keep HTML clean -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <section class="footer-enquiry-section" style="background: var(--bg-main); padding: var(--space-xl) 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div style="background: var(--grad-brand); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-md);">
+          <h3 style="color: #FFF; font-size: var(--text-2xl); max-width: 600px; line-height: 1.4;">
+            From savings to lump sum needs, our experts will help you choose the chit plan that perfectly suits your goals.
+          </h3>
+          <a href="schemes.html" class="btn-glow" style="background: #FFF; color: var(--brand-primary); box-shadow: none;">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="original-footer" style="background: var(--bg-alt); padding: var(--space-xl) 0 var(--space-md) 0;">
+    <div class="container">
+      
+      <!-- Top Logo Section -->
+      <div style="text-align: left; margin-bottom: var(--space-xl); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-lg);">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Sri Mangalam Chit Funds Logo" style="height: 100px; max-width: 100%; object-fit: contain;">
+      </div>
+
+      <div class="footer-grid-original" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl);">
+        
+        <!-- Column 1 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Quick Link</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="index.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Home</a>
+            <a href="about-us.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">About us</a>
+            <a href="schemes.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Schemes</a>
+            <a href="careers.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Careers</a>
+            <a href="gallery.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Gallery</a>
+            <a href="faq.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Our Policy</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="privacy-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Privacy Policy</a>
+            <a href="refund-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Refund Policy</a>
+            <a href="terms-and-condition.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Terms and Conditions</a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Contact Info</h4>
+          <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/footer-location.png" alt="Icon" style="width: 24px;">
+              <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0; line-height: 1.5;">Sri Mangalam Chit Funds(Madurai) Pvt Ltd,<br>160/3, Kamarajar Salai<br>Madurai - 625 001</p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/call-icon.png" alt="Icon" style="width: 24px;">
+              <a href="tel:+919940065400" style="color: var(--brand-primary); font-size: var(--text-sm); text-decoration: none; font-weight: 600;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/whatsapp-icon.png" alt="Icon" style="width: 24px;">
+              <a href="https://wa.me/919940065400" target="_blank" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/email-icon.png" alt="Icon" style="width: 24px;">
+              <a href="mailto:contact@srimangalamchitfundsmadurai.com" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">contact@srimangalamchitfundsmadurai.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); text-align: center;">
+        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0;">Copyright For Sri Mangalam Chit Funds(Madurai) Private Limited @2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Gallery and Lightbox logic
+    const grid = document.getElementById('galleryGrid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    let html = '';
+    for(let i=1; i<=40; i++) {
+      if (i === 9 || i === 29) continue; // Skip missing images
+      let num = i < 10 ? '0'+i : i;
+      let src = `https://srimangalamchitfundsmadurai.com/images/gallery-${num}.webp`;
+      html += `
+        <div class="gallery-item" onclick="openLightbox('${src}')">
+          <img src="${src}" alt="Gallery image ${num}" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    grid.innerHTML = html;
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+    }
+    
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+    }
+    
+    // Close on click outside image
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) closeLightbox();
+    });
+  </script>
+</body>
+</html>

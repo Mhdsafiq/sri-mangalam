@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schemes | Sri Mangalam Chit Funds Madurai</title>
+  <meta name="description" content="Explore flexible and secure chit fund plans from ₹5,00,000 to ₹50,00,000.">
+  <link rel="icon" type="image/png" href="https://srimangalamchitfundsmadurai.com/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Scheme specific styles */
+    .scheme-grid {
+      display: grid;
+      gap: var(--space-xl);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .scheme-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: var(--space-md);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: var(--space-sm);
+    }
+    .scheme-val {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+    }
+    .scheme-meta {
+      text-align: right;
+      color: var(--text-secondary);
+      font-size: var(--text-sm);
+    }
+    .scheme-meta strong {
+      color: var(--text-primary);
+      font-size: var(--text-lg);
+      display: block;
+    }
+    
+    .table-toggle {
+      width: 100%;
+      background: var(--brand-primary-light);
+      border: 1px solid rgba(30, 58, 138, 0.15);
+      color: var(--brand-primary);
+      padding: 15px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      margin-bottom: var(--space-sm);
+    }
+    .table-toggle:hover {
+      background: rgba(30, 58, 138, 0.12);
+    }
+    .table-toggle svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+    .table-toggle.active svg {
+      transform: rotate(180deg);
+    }
+    
+    .scheme-table-container {
+      display: none;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      margin-bottom: var(--space-md);
+    }
+    .scheme-table-container.active {
+      display: block;
+      animation: slideDown 0.4s ease forwards;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .scheme-actions {
+      display: flex;
+      gap: var(--space-sm);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+    .btn-outline:hover {
+      background: var(--bg-alt);
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+    }
+    .btn-wa {
+      background: #25D366;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+      transition: all 0.3s ease;
+    }
+    .btn-wa:hover {
+      background: #22bf5b;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pill Navbar -->
+  <div class="pill-nav-wrapper">
+    <nav class="pill-nav" id="pillNav">
+      <a href="index.html" class="nav-logo">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">Story</a>
+        <a href="schemes.html" class="active">Plans</a>
+        <a href="careers.html">Careers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <a href="contact-us.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main style="position: relative; z-index: 10; background: var(--bg-main);">
+
+    <!-- Page Banner -->
+    <header class="sub-hero">
+      <div class="container">
+        <h1>Investment <span>Plans</span></h1>
+        <p class="subtitle" style="margin: 0 auto;">Choose from our high-structure, high-yield chit plans designed for maximum returns.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        
+        <div class="scheme-grid">
+          <!-- Scheme 1 -->
+          <div class="scheme-neo-card fade-up">
+            <div class="scheme-header">
+              <div>
+                <span style="color: var(--brand-green); font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase;">Total Value</span>
+                <div class="scheme-val">Rs. 5,00,000</div>
+              </div>
+              <div class="scheme-meta">
+                <span>Duration</span>
+                <strong>20 Months</strong>
+              </div>
+              <div class="scheme-meta">
+                <span>Installment</span>
+                <strong>Rs. 25,000</strong>
+              </div>
+            </div>
+            
+            <div class="scheme-details-box" style="margin-top: var(--space-md); padding: var(--space-md); background: rgba(10, 122, 58, 0.05); border-radius: var(--radius-md); border: 1px solid rgba(10, 122, 58, 0.1);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Daily Amount to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 8,400</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">First Month to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 2,50,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Members:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Month:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+            </div>
+
+            <button class="table-toggle" onclick="this.nextElementSibling.classList.toggle('active'); this.classList.toggle('active');">
+              View Full Schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="scheme-table-container">
+              <table class="glass-table">
+                <thead>
+                  <tr>
+                    <th>Inst. No</th>
+                    <th>Due</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>01</td><td>Rs. 25,000</td><td>Bank</td></tr>
+                  <tr><td>02</td><td>Rs. 18,750</td><td>Rs. 3,50,000</td></tr>
+                  <tr><td>03</td><td>Rs. 18,750</td><td>Rs. 3,50,000</td></tr>
+                  <tr><td>04</td><td>Rs. 18,750</td><td>Rs. 3,50,000</td></tr>
+                  <tr><td>05</td><td>Rs. 18,750</td><td>Rs. 3,50,000</td></tr>
+                  <tr><td>06</td><td>Rs. 19,000</td><td>Rs. 3,55,000</td></tr>
+                  <tr><td>07</td><td>Rs. 19,250</td><td>Rs. 3,60,000</td></tr>
+                  <tr><td>08</td><td>Rs. 19,500</td><td>Rs. 3,65,000</td></tr>
+                  <tr><td>09</td><td>Rs. 19,750</td><td>Rs. 3,70,000</td></tr>
+                  <tr><td>10</td><td>Rs. 20,000</td><td>Rs. 3,75,000</td></tr>
+                  <tr><td>11</td><td>Rs. 20,500</td><td>Rs. 3,85,000</td></tr>
+                  <tr><td>12</td><td>Rs. 21,000</td><td>Rs. 3,95,000</td></tr>
+                  <tr><td>13</td><td>Rs. 21,500</td><td>Rs. 4,05,000</td></tr>
+                  <tr><td>14</td><td>Rs. 22,000</td><td>Rs. 4,15,000</td></tr>
+                  <tr><td>15</td><td>Rs. 22,500</td><td>Rs. 4,25,000</td></tr>
+                  <tr><td>16</td><td>Rs. 23,000</td><td>Rs. 4,35,000</td></tr>
+                  <tr><td>17</td><td>Rs. 23,500</td><td>Rs. 4,45,000</td></tr>
+                  <tr><td>18</td><td>Rs. 24,000</td><td>Rs. 4,55,000</td></tr>
+                  <tr><td>19</td><td>Rs. 24,500</td><td>Rs. 4,65,000</td></tr>
+                  <tr><td>20</td><td>Rs. 25,000</td><td>Rs. 4,85,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="scheme-actions">
+              <a href="contact-us.html" class="btn-outline">Enquire Now</a>
+              <a href="https://wa.me/919940065400?text=I'm%20interested%20in%20the%205,00,000%20Chit%20Scheme" target="_blank" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.486 2 2 6.486 2 12c0 1.728.45 3.413 1.303 4.896L2 22l5.255-1.287A9.953 9.953 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.626 0-3.214-.473-4.567-1.37l-.327-.196-3.388.83.89-3.251-.215-.34A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+          <!-- Scheme 2 -->
+          <div class="scheme-neo-card fade-up">
+            <div class="scheme-header">
+              <div>
+                <span style="color: var(--brand-green); font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase;">Total Value</span>
+                <div class="scheme-val">Rs. 10,00,000</div>
+              </div>
+              <div class="scheme-meta">
+                <span>Duration</span>
+                <strong>20 Months</strong>
+              </div>
+              <div class="scheme-meta">
+                <span>Installment</span>
+                <strong>Rs. 50,000</strong>
+              </div>
+            </div>
+            
+            <div class="scheme-details-box" style="margin-top: var(--space-md); padding: var(--space-md); background: rgba(10, 122, 58, 0.05); border-radius: var(--radius-md); border: 1px solid rgba(10, 122, 58, 0.1);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Daily Amount to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 8,400</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">First Month to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 2,50,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Members:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Month:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+            </div>
+
+            <button class="table-toggle" onclick="this.nextElementSibling.classList.toggle('active'); this.classList.toggle('active');">
+              View Full Schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="scheme-table-container">
+              <table class="glass-table">
+                <thead>
+                  <tr>
+                    <th>Inst. No</th>
+                    <th>Due</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>01</td><td>Rs. 50,000</td><td>Bank</td></tr>
+                  <tr><td>02</td><td>Rs. 37,500</td><td>Rs. 7,00,000</td></tr>
+                  <tr><td>03</td><td>Rs. 37,500</td><td>Rs. 7,00,000</td></tr>
+                  <tr><td>04</td><td>Rs. 37,500</td><td>Rs. 7,00,000</td></tr>
+                  <tr><td>05</td><td>Rs. 37,500</td><td>Rs. 7,00,000</td></tr>
+                  <tr><td>06</td><td>Rs. 38,000</td><td>Rs. 7,10,000</td></tr>
+                  <tr><td>07</td><td>Rs. 38,500</td><td>Rs. 7,20,000</td></tr>
+                  <tr><td>08</td><td>Rs. 39,000</td><td>Rs. 7,30,000</td></tr>
+                  <tr><td>09</td><td>Rs. 39,500</td><td>Rs. 7,40,000</td></tr>
+                  <tr><td>10</td><td>Rs. 40,000</td><td>Rs. 7,50,000</td></tr>
+                  <tr><td>11</td><td>Rs. 41,000</td><td>Rs. 7,70,000</td></tr>
+                  <tr><td>12</td><td>Rs. 42,000</td><td>Rs. 7,90,000</td></tr>
+                  <tr><td>13</td><td>Rs. 43,000</td><td>Rs. 8,10,000</td></tr>
+                  <tr><td>14</td><td>Rs. 44,000</td><td>Rs. 8,30,000</td></tr>
+                  <tr><td>15</td><td>Rs. 45,000</td><td>Rs. 8,50,000</td></tr>
+                  <tr><td>16</td><td>Rs. 46,000</td><td>Rs. 8,70,000</td></tr>
+                  <tr><td>17</td><td>Rs. 47,000</td><td>Rs. 8,90,000</td></tr>
+                  <tr><td>18</td><td>Rs. 48,000</td><td>Rs. 9,10,000</td></tr>
+                  <tr><td>19</td><td>Rs. 49,000</td><td>Rs. 9,30,000</td></tr>
+                  <tr><td>20</td><td>Rs. 50,000</td><td>Rs. 9,70,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="scheme-actions">
+              <a href="contact-us.html" class="btn-outline">Enquire Now</a>
+              <a href="https://wa.me/919940065400?text=I'm%20interested%20in%20the%2010,00,000%20Chit%20Scheme" target="_blank" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.486 2 2 6.486 2 12c0 1.728.45 3.413 1.303 4.896L2 22l5.255-1.287A9.953 9.953 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.626 0-3.214-.473-4.567-1.37l-.327-.196-3.388.83.89-3.251-.215-.34A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+          <!-- Scheme 3 -->
+          <div class="scheme-neo-card fade-up">
+            <div class="scheme-header">
+              <div>
+                <span style="color: var(--brand-green); font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase;">Total Value</span>
+                <div class="scheme-val">Rs. 20,00,000</div>
+              </div>
+              <div class="scheme-meta">
+                <span>Duration</span>
+                <strong>20 Months</strong>
+              </div>
+              <div class="scheme-meta">
+                <span>Installment</span>
+                <strong>Rs. 1,00,000</strong>
+              </div>
+            </div>
+            
+            <div class="scheme-details-box" style="margin-top: var(--space-md); padding: var(--space-md); background: rgba(10, 122, 58, 0.05); border-radius: var(--radius-md); border: 1px solid rgba(10, 122, 58, 0.1);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Daily Amount to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 8,400</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">First Month to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 2,50,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Members:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Month:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+            </div>
+
+            <button class="table-toggle" onclick="this.nextElementSibling.classList.toggle('active'); this.classList.toggle('active');">
+              View Full Schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="scheme-table-container">
+              <table class="glass-table">
+                <thead>
+                  <tr>
+                    <th>Inst. No</th>
+                    <th>Due</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>01</td><td>Rs. 1,00,000</td><td>Bank</td></tr>
+                  <tr><td>02</td><td>Rs. 75,500</td><td>Rs. 14,00,000</td></tr>
+                  <tr><td>03</td><td>Rs. 75,500</td><td>Rs. 14,00,000</td></tr>
+                  <tr><td>04</td><td>Rs. 75,500</td><td>Rs. 14,00,000</td></tr>
+                  <tr><td>05</td><td>Rs. 75,500</td><td>Rs. 14,00,000</td></tr>
+                  <tr><td>06</td><td>Rs. 76,000</td><td>Rs. 14,20,000</td></tr>
+                  <tr><td>07</td><td>Rs. 77,000</td><td>Rs. 14,40,000</td></tr>
+                  <tr><td>08</td><td>Rs. 78,000</td><td>Rs. 14,60,000</td></tr>
+                  <tr><td>09</td><td>Rs. 79,000</td><td>Rs. 14,80,000</td></tr>
+                  <tr><td>10</td><td>Rs. 80,000</td><td>Rs. 15,00,000</td></tr>
+                  <tr><td>11</td><td>Rs. 82,000</td><td>Rs. 15,40,000</td></tr>
+                  <tr><td>12</td><td>Rs. 84,000</td><td>Rs. 15,80,000</td></tr>
+                  <tr><td>13</td><td>Rs. 86,000</td><td>Rs. 16,20,000</td></tr>
+                  <tr><td>14</td><td>Rs. 88,000</td><td>Rs. 16,60,000</td></tr>
+                  <tr><td>15</td><td>Rs. 90,000</td><td>Rs. 17,00,000</td></tr>
+                  <tr><td>16</td><td>Rs. 92,000</td><td>Rs. 17,40,000</td></tr>
+                  <tr><td>17</td><td>Rs. 94,000</td><td>Rs. 17,80,000</td></tr>
+                  <tr><td>18</td><td>Rs. 96,000</td><td>Rs. 18,20,000</td></tr>
+                  <tr><td>19</td><td>Rs. 98,000</td><td>Rs. 18,60,000</td></tr>
+                  <tr><td>20</td><td>Rs. 1,00,000</td><td>Rs. 19,40,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="scheme-actions">
+              <a href="contact-us.html" class="btn-outline">Enquire Now</a>
+              <a href="https://wa.me/919940065400?text=I'm%20interested%20in%20the%2020,00,000%20Chit%20Scheme" target="_blank" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.486 2 2 6.486 2 12c0 1.728.45 3.413 1.303 4.896L2 22l5.255-1.287A9.953 9.953 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.626 0-3.214-.473-4.567-1.37l-.327-.196-3.388.83.89-3.251-.215-.34A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+          <!-- Scheme 4 -->
+          <div class="scheme-neo-card fade-up">
+            <div class="scheme-header">
+              <div>
+                <span style="color: var(--brand-green); font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase;">Total Value</span>
+                <div class="scheme-val">Rs. 25,00,000</div>
+              </div>
+              <div class="scheme-meta">
+                <span>Duration</span>
+                <strong>20 Months</strong>
+              </div>
+              <div class="scheme-meta">
+                <span>Installment</span>
+                <strong>Rs. 1,25,000</strong>
+              </div>
+            </div>
+            
+            <div class="scheme-details-box" style="margin-top: var(--space-md); padding: var(--space-md); background: rgba(10, 122, 58, 0.05); border-radius: var(--radius-md); border: 1px solid rgba(10, 122, 58, 0.1);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Daily Amount to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 8,400</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">First Month to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 2,50,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Members:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Month:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+            </div>
+
+            <button class="table-toggle" onclick="this.nextElementSibling.classList.toggle('active'); this.classList.toggle('active');">
+              View Full Schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="scheme-table-container">
+              <table class="glass-table">
+                <thead>
+                  <tr>
+                    <th>Inst. No</th>
+                    <th>Due</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>01</td><td>Rs. 1,25,000</td><td>Bank</td></tr>
+                  <tr><td>02</td><td>Rs. 93,750</td><td>Rs. 17,50,000</td></tr>
+                  <tr><td>03</td><td>Rs. 93,750</td><td>Rs. 17,50,000</td></tr>
+                  <tr><td>04</td><td>Rs. 93,750</td><td>Rs. 17,50,000</td></tr>
+                  <tr><td>05</td><td>Rs. 93,750</td><td>Rs. 17,50,000</td></tr>
+                  <tr><td>06</td><td>Rs. 95,000</td><td>Rs. 17,75,000</td></tr>
+                  <tr><td>07</td><td>Rs. 96,250</td><td>Rs. 18,00,000</td></tr>
+                  <tr><td>08</td><td>Rs. 97,500</td><td>Rs. 18,25,000</td></tr>
+                  <tr><td>09</td><td>Rs. 98,750</td><td>Rs. 18,50,000</td></tr>
+                  <tr><td>10</td><td>Rs. 1,00,000</td><td>Rs. 18,75,000</td></tr>
+                  <tr><td>11</td><td>Rs. 1,02,500</td><td>Rs. 19,25,000</td></tr>
+                  <tr><td>12</td><td>Rs. 1,05,000</td><td>Rs. 19,75,000</td></tr>
+                  <tr><td>13</td><td>Rs. 1,07,500</td><td>Rs. 20,25,000</td></tr>
+                  <tr><td>14</td><td>Rs. 1,10,000</td><td>Rs. 20,75,000</td></tr>
+                  <tr><td>15</td><td>Rs. 1,12,500</td><td>Rs. 21,25,000</td></tr>
+                  <tr><td>16</td><td>Rs. 1,15,000</td><td>Rs. 21,75,000</td></tr>
+                  <tr><td>17</td><td>Rs. 1,17,500</td><td>Rs. 22,25,000</td></tr>
+                  <tr><td>18</td><td>Rs. 1,20,000</td><td>Rs. 22,75,000</td></tr>
+                  <tr><td>19</td><td>Rs. 1,22,500</td><td>Rs. 23,25,000</td></tr>
+                  <tr><td>20</td><td>Rs. 1,25,000</td><td>Rs. 24,25,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="scheme-actions">
+              <a href="contact-us.html" class="btn-outline">Enquire Now</a>
+              <a href="https://wa.me/919940065400?text=I'm%20interested%20in%20the%2025,00,000%20Chit%20Scheme" target="_blank" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.486 2 2 6.486 2 12c0 1.728.45 3.413 1.303 4.896L2 22l5.255-1.287A9.953 9.953 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.626 0-3.214-.473-4.567-1.37l-.327-.196-3.388.83.89-3.251-.215-.34A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+          <!-- Scheme 5 -->
+          <div class="scheme-neo-card fade-up">
+            <div class="scheme-header">
+              <div>
+                <span style="color: var(--brand-green); font-size: var(--text-sm); letter-spacing: 2px; text-transform: uppercase;">Total Value</span>
+                <div class="scheme-val">Rs. 50,00,000</div>
+              </div>
+              <div class="scheme-meta">
+                <span>Duration</span>
+                <strong>20 Months</strong>
+              </div>
+              <div class="scheme-meta">
+                <span>Installment</span>
+                <strong>Rs. 25,0000</strong>
+              </div>
+            </div>
+            
+            <div class="scheme-details-box" style="margin-top: var(--space-md); padding: var(--space-md); background: rgba(10, 122, 58, 0.05); border-radius: var(--radius-md); border: 1px solid rgba(10, 122, 58, 0.1);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Daily Amount to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 8,400</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">First Month to Pay:</span>
+                <strong style="color: var(--text-primary);">Rs. 2,50,000</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Members:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: var(--text-sm);">
+                <span style="color: var(--text-secondary);">Total Month:</span>
+                <strong style="color: var(--text-primary);">20</strong>
+              </div>
+            </div>
+
+            <button class="table-toggle" onclick="this.nextElementSibling.classList.toggle('active'); this.classList.toggle('active');">
+              View Full Schedule
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <div class="scheme-table-container">
+              <table class="glass-table">
+                <thead>
+                  <tr>
+                    <th>Inst. No</th>
+                    <th>Due</th>
+                    <th>Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>01</td><td>Rs. 2,50,000</td><td>Bank</td></tr>
+                  <tr><td>02</td><td>Rs. 1,87,500</td><td>Rs. 35,00,000</td></tr>
+                  <tr><td>03</td><td>Rs. 1,87,500</td><td>Rs. 35,00,000</td></tr>
+                  <tr><td>04</td><td>Rs. 1,87,500</td><td>Rs. 35,00,000</td></tr>
+                  <tr><td>05</td><td>Rs. 1,87,500</td><td>Rs. 35,00,000</td></tr>
+                  <tr><td>06</td><td>Rs. 1,90,000</td><td>Rs. 35,50,000</td></tr>
+                  <tr><td>07</td><td>Rs. 1,92,500</td><td>Rs. 36,00,000</td></tr>
+                  <tr><td>08</td><td>Rs. 1,95,000</td><td>Rs. 36,50,000</td></tr>
+                  <tr><td>09</td><td>Rs. 1,97,500</td><td>Rs. 37,00,000</td></tr>
+                  <tr><td>10</td><td>Rs. 2,00,000</td><td>Rs. 37,50,000</td></tr>
+                  <tr><td>11</td><td>Rs. 2,05,000</td><td>Rs. 38,50,000</td></tr>
+                  <tr><td>12</td><td>Rs. 2,10,000</td><td>Rs. 39,50,000</td></tr>
+                  <tr><td>13</td><td>Rs. 2,15,000</td><td>Rs. 40,50,000</td></tr>
+                  <tr><td>14</td><td>Rs. 2,20,000</td><td>Rs. 41,50,000</td></tr>
+                  <tr><td>15</td><td>Rs. 2,25,000</td><td>Rs. 42,50,000</td></tr>
+                  <tr><td>16</td><td>Rs. 2,30,000</td><td>Rs. 43,50,000</td></tr>
+                  <tr><td>17</td><td>Rs. 2,35,000</td><td>Rs. 44,50,000</td></tr>
+                  <tr><td>18</td><td>Rs. 2,40,000</td><td>Rs. 45,50,000</td></tr>
+                  <tr><td>19</td><td>Rs. 2,45,000</td><td>Rs. 46,50,000</td></tr>
+                  <tr><td>20</td><td>Rs. 2,50,000</td><td>Rs. 48,50,000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="scheme-actions">
+              <a href="contact-us.html" class="btn-outline">Enquire Now</a>
+              <a href="https://wa.me/919940065400?text=I'm%20interested%20in%20the%2050,00,000%20Chit%20Scheme" target="_blank" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.486 2 2 6.486 2 12c0 1.728.45 3.413 1.303 4.896L2 22l5.255-1.287A9.953 9.953 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.626 0-3.214-.473-4.567-1.37l-.327-.196-3.388.83.89-3.251-.215-.34A7.952 7.952 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+</div>
+      </div>
+    </section>
+
+    <!-- Footer Enquiry -->
+    <section class="footer-enquiry-section" style="background: var(--bg-main); padding: var(--space-xl) 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div style="background: var(--grad-brand); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-md);">
+          <h3 style="color: #FFF; font-size: var(--text-2xl); max-width: 600px; line-height: 1.4;">
+            From savings to lump sum needs, our experts will help you.
+          </h3>
+          <a href="contact-us.html" class="btn-glow" style="background: #FFF; color: var(--brand-primary); box-shadow: none;">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="original-footer" style="background: var(--bg-alt); padding: var(--space-xl) 0 var(--space-md) 0;">
+    <div class="container">
+      
+      <!-- Top Logo Section -->
+      <div style="text-align: left; margin-bottom: var(--space-xl); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-lg);">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Sri Mangalam Chit Funds Logo" style="height: 100px; max-width: 100%; object-fit: contain;">
+      </div>
+
+      <div class="footer-grid-original" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl);">
+        
+        <!-- Column 1 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Quick Link</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="index.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Home</a>
+            <a href="about-us.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">About us</a>
+            <a href="schemes.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Schemes</a>
+            <a href="careers.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Careers</a>
+            <a href="gallery.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Gallery</a>
+            <a href="faq.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Our Policy</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="privacy-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Privacy Policy</a>
+            <a href="refund-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Refund Policy</a>
+            <a href="terms-and-condition.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Terms and Conditions</a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Contact Info</h4>
+          <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/footer-location.png" alt="Icon" style="width: 24px;">
+              <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0; line-height: 1.5;">Sri Mangalam Chit Funds(Madurai) Pvt Ltd,<br>160/3, Kamarajar Salai<br>Madurai - 625 001</p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/call-icon.png" alt="Icon" style="width: 24px;">
+              <a href="tel:+919940065400" style="color: var(--brand-primary); font-size: var(--text-sm); text-decoration: none; font-weight: 600;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/whatsapp-icon.png" alt="Icon" style="width: 24px;">
+              <a href="https://wa.me/919940065400" target="_blank" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/email-icon.png" alt="Icon" style="width: 24px;">
+              <a href="mailto:contact@srimangalamchitfundsmadurai.com" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">contact@srimangalamchitfundsmadurai.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); text-align: center;">
+        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0;">Copyright For Sri Mangalam Chit Funds(Madurai) Private Limited @2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

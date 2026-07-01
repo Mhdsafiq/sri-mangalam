@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Sri Mangalam Chit Funds Madurai</title>
+  <meta name="description" content="Frequently asked questions about our modern chit fund operations.">
+  <link rel="icon" type="image/png" href="https://srimangalamchitfundsmadurai.com/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Radical FAQ Specifics */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      margin-bottom: var(--space-sm);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-item:focus-within, .faq-item:hover {
+      border-color: var(--brand-primary-light);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .faq-q {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+    }
+    
+    .faq-icon {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      flex-shrink: 0;
+    }
+    
+    .faq-icon::before, .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--brand-primary);
+      border-radius: 2px;
+      transition: all 0.4s ease;
+    }
+    .faq-icon::before { width: 16px; height: 2px; }
+    .faq-icon::after { width: 2px; height: 16px; }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      background: var(--brand-primary);
+    }
+    .faq-item.active .faq-icon::before,
+    .faq-item.active .faq-icon::after {
+      background: #FFF;
+    }
+    .faq-item.active .faq-icon::after {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+    
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+    
+    .faq-item.active .faq-a {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in-out;
+    }
+    
+    .faq-a-inner {
+      padding: 0 var(--space-md) var(--space-md);
+      color: var(--text-secondary);
+      font-size: var(--text-lg);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pill Navbar -->
+  <div class="pill-nav-wrapper">
+    <nav class="pill-nav" id="pillNav">
+      <a href="index.html" class="nav-logo">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">Story</a>
+        <a href="schemes.html">Plans</a>
+        <a href="careers.html">Careers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html" class="active">FAQ</a>
+      </div>
+      <a href="contact-us.html" class="nav-cta">Let's Talk</a>
+    </nav>
+  </div>
+
+  <main style="position: relative; z-index: 10; background: var(--bg-main);">
+
+    <!-- Page Banner -->
+    <header class="sub-hero">
+      <div class="container">
+        <h1>Knowledge <span>Base</span></h1>
+        <p class="subtitle" style="margin: 0 auto;">Everything you need to know about our operations, security, and yield generation.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        
+        <div class="faq-container">
+          
+          <div class="faq-item">
+            <button class="faq-q">
+              What is a chit fund and how does it work?
+              <div class="faq-icon"></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                A chit fund is a savings and borrowing system where a group of members contribute a fixed amount monthly. Each month, the pooled amount is auctioned, and the lowest bidder wins. The difference (Kasar) is shared among all members, reducing their future instalments. Sri Mangalam operates with 20-member groups and ensures transparent, fair auctions.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Why should I choose Sri Mangalam?
+              <div class="faq-icon"></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                We bring over 30 years of business experience. We offer fixed 10% Kasar without any foreman commission, easy documentation with no joining fee, multiple payment options (Bank Transfer, UPI, Cheque, App), and prize money disbursement within hours of the auction.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Is my investment safe?
+              <div class="faq-icon"></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Absolutely. Sri Mangalam Chit Funds (Madurai) Pvt Ltd is a registered company operating strictly under the Chit Fund Act. We maintain complete transparency in all transactions, and all payments are processed exclusively through traceable bank transfers.
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-q">
+              Who is eligible to join?
+              <div class="faq-icon"></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Any individual aged 18 and above with valid ID proof can join our schemes. Business establishments and organizations are also welcome to participate in our higher-tier plans ranging up to ₹50,00,000.
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-q">
+              How do I participate in an auction?
+              <div class="faq-icon"></div>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                In each monthly auction, members who have not yet received the prize money can bid. The member who offers the highest discount (lowest bid) wins. The discount amount is distributed as Kasar (dividend) among all members. Sri Mangalam ensures fair and transparent auctions with a fixed 10% kasar.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="footer-enquiry-section" style="background: var(--bg-main); padding: var(--space-xl) 0; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div style="background: var(--grad-brand); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-md);">
+          <h3 style="color: #FFF; font-size: var(--text-2xl); max-width: 600px; line-height: 1.4;">
+            From savings to lump sum needs, our experts will help you choose the chit plan that perfectly suits your goals.
+          </h3>
+          <a href="schemes.html" class="btn-glow" style="background: #FFF; color: var(--brand-primary); box-shadow: none;">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="original-footer" style="background: var(--bg-alt); padding: var(--space-xl) 0 var(--space-md) 0;">
+    <div class="container">
+      
+      <!-- Top Logo Section -->
+      <div style="text-align: left; margin-bottom: var(--space-xl); border-bottom: 1px solid var(--border-light); padding-bottom: var(--space-lg);">
+        <img src="https://srimangalamchitfundsmadurai.com/images/header-logo.png" alt="Sri Mangalam Chit Funds Logo" style="height: 100px; max-width: 100%; object-fit: contain;">
+      </div>
+
+      <div class="footer-grid-original" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl);">
+        
+        <!-- Column 1 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Quick Link</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="index.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Home</a>
+            <a href="about-us.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">About us</a>
+            <a href="schemes.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Schemes</a>
+            <a href="careers.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Careers</a>
+            <a href="gallery.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Gallery</a>
+            <a href="faq.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Our Policy</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="privacy-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Privacy Policy</a>
+            <a href="refund-policy.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Refund Policy</a>
+            <a href="terms-and-condition.html" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">Terms and Conditions</a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 style="font-size: var(--text-lg); margin-bottom: var(--space-md); color: var(--text-primary);">Contact Info</h4>
+          <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/footer-location.png" alt="Icon" style="width: 24px;">
+              <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0; line-height: 1.5;">Sri Mangalam Chit Funds(Madurai) Pvt Ltd,<br>160/3, Kamarajar Salai<br>Madurai - 625 001</p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/call-icon.png" alt="Icon" style="width: 24px;">
+              <a href="tel:+919940065400" style="color: var(--brand-primary); font-size: var(--text-sm); text-decoration: none; font-weight: 600;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/whatsapp-icon.png" alt="Icon" style="width: 24px;">
+              <a href="https://wa.me/919940065400" target="_blank" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">+91 99400 65400</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <img src="https://srimangalamchitfundsmadurai.com/images/email-icon.png" alt="Icon" style="width: 24px;">
+              <a href="mailto:contact@srimangalamchitfundsmadurai.com" style="color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none;">contact@srimangalamchitfundsmadurai.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-light); padding-top: var(--space-md); text-align: center;">
+        <p style="color: var(--text-secondary); font-size: var(--text-sm); margin: 0;">Copyright For Sri Mangalam Chit Funds(Madurai) Private Limited @2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
